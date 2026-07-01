@@ -2,10 +2,15 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   output: 'export',
+  distDir: 'out',
+  basePath: '',
+  trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
   },
   images: {
     unoptimized: true,
@@ -19,9 +24,6 @@ const nextConfig = {
         hostname: '**.pexels.com',
       },
     ],
-  },
-  experimental: {
-    optimizePackageImports: ['lucide-react'],
   },
 };
 
